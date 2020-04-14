@@ -54,38 +54,38 @@ module.exports = {
     },
     optimization: {
         minimizer: [
-            new TerserPlugin({
-                cache: true,
-                parallel: true /*启用cpu加速打包速度*/,
-                sourceMap: true, // set to true if you want JS source maps/*帮助快速查找问题所在的地方*/
-                exclude: /node_modules/,
-            }),
+            // new TerserPlugin({
+            //     cache: true,
+            //     parallel: true /*启用cpu加速打包速度*/,
+            //     sourceMap: true, // set to true if you want JS source maps/*帮助快速查找问题所在的地方*/
+            //     exclude: /node_modules/,
+            // }),
             new OptimizeCSSAssetsPlugin(
                 {}
             )
         ],
         // namedChunks: true,
         // runtimeChunk: true,
-        splitChunks: {
-            chunks: 'all',
-            // maxInitialRequests: Infinity,
-            // minSize: 10,
-            // cacheGroups: {
-            //     vendor: {
-            //         test: /[\\/]node_modules[\\/]/,
-            //         name(module) {
-            //             // get the name. E.g. node_modules/packageName/not/this/part.js
-            //             // or node_modules/packageName
-            //             const packageName = module.context.match(
-            //                 /[\\/]node_modules[\\/](.*?)([\\/]|$)/
-            //             )[1];
-            //
-            //             // npm package names are URL-safe, but some servers don't like @ symbols
-            //             return `npm.${packageName.replace('@', '')}`;
-            //         },
-            //     },
-            // },
-        },
+        // splitChunks: {
+        //     chunks: 'all',
+        //     // maxInitialRequests: Infinity,
+        //     // minSize: 10,
+        //     // cacheGroups: {
+        //     //     vendor: {
+        //     //         test: /[\\/]node_modules[\\/]/,
+        //     //         name(module) {
+        //     //             // get the name. E.g. node_modules/packageName/not/this/part.js
+        //     //             // or node_modules/packageName
+        //     //             const packageName = module.context.match(
+        //     //                 /[\\/]node_modules[\\/](.*?)([\\/]|$)/
+        //     //             )[1];
+        //     //
+        //     //             // npm package names are URL-safe, but some servers don't like @ symbols
+        //     //             return `npm.${packageName.replace('@', '')}`;
+        //     //         },
+        //     //     },
+        //     // },
+        // },
     },
 
     plugins: [
