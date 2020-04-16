@@ -1,4 +1,5 @@
 src
 .idea
 .babelrc
-webpack.prod.config.js
+webpack.config.js
+webpack.dev.config.js

@@ -17,7 +17,7 @@ module.exports = {
     output: {
         path: path.resolve('dist'),
         filename: 'js/[name].js',
-        libraryTarget: "commonjs2",
+        libraryTarget: "commonjs2"
     },
     module: {
         rules: [
@@ -96,4 +96,7 @@ module.exports = {
         }),
         // new webpack.HashedModuleIdsPlugin(),
     ],
+    externals: {
+        react: "react"
+    }
 };

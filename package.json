@@ -1,10 +1,10 @@
 {
   "name": "funky-bar",
-  "version": "1.0.29",
+  "version": "1.0.54",
   "description": "Cyberpunk style of scroll bar",
   "main": "./dist/js/main.js",
   "scripts": {
-    "build": "set NODE_ENV=production&&webpack --progress --mode production --config webpack.prod.config.js"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",

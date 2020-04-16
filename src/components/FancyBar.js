@@ -4,7 +4,7 @@ import css from './fancyBar.css';
 let id = null;
 const FancyBar = memo(() => {
     useLayoutEffect(() => {
-        let progress = document.getElementById(css.scrollbar);
+        let progress = document.getElementsByClassName(css.scrollbar)[0];
         window.onscroll = function() {
             console.log('haha')
             cancelAnimationFrame(id);
@@ -21,8 +21,8 @@ const FancyBar = memo(() => {
 
     return (
         <>
-            <div id={css.scrollbar}/>
-            <div id={css.scrollPath} />
+            <div className={css.scrollbar}/>
+            <div className={css.scrollPath} />
         </>
     );
 }, () => true);

@@ -2,7 +2,7 @@
     width: 0;
 }
 
-#scrollPath{
+.scrollPath{
     position: fixed;
     top: 0;
     right: 0;
@@ -10,7 +10,7 @@
     height: 100%;
     background: rgba(255, 255, 255, 0.05);
 }
-#scrollbar{
+.scrollbar{
     position: fixed;
     top: 0;
     right: 0;
@@ -29,7 +29,7 @@
         filter: hue-rotate(360deg);
     }
 }
-#scrollbar:before{
+.scrollbar:before{
     content: '';
     position: absolute;
     top: 0;
@@ -39,7 +39,7 @@
     background: linear-gradient(to Top, #008aff, #00ffe7);
     filter: blur(10px);
 }
-#scrollbar:after{
+.scrollbar:after{
     content: '';
     position: absolute;
     top: 0;
