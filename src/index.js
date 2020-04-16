@@ -8,5 +8,6 @@ import React from "react";
 // module.exports = {
 //     FancyBar
 // };
-const Dd = () => <FancyBar />;
-export default Dd;
+export const Dd = <div>haha</div>;
+const FunkyBar = () => <FancyBar />;
+export default FunkyBar;

@@ -78,7 +78,7 @@ module.exports =
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -241,6 +241,9 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "Dd", function() { return /* binding */ Dd; });
+
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
@@ -291,11 +294,13 @@ var FancyBar = Object(react["memo"])(function () {
 //     FancyBar
 // };
 
-var src_Dd = function Dd() {
+var Dd = /*#__PURE__*/react_default.a.createElement("div", null, "haha");
+
+var src_FunkyBar = function FunkyBar() {
   return /*#__PURE__*/react_default.a.createElement(components_FancyBar, null);
 };
 
-/* harmony default export */ var src = __webpack_exports__["default"] = (src_Dd);
+/* harmony default export */ var src = __webpack_exports__["default"] = (src_FunkyBar);
 
 /***/ })
 /******/ ]);
