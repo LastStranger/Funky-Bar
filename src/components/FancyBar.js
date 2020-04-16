@@ -6,7 +6,6 @@ const FancyBar = memo(() => {
     useLayoutEffect(() => {
         let progress = document.getElementsByClassName(css.scrollbar)[0];
         window.onscroll = function() {
-            console.log('haha')
             cancelAnimationFrame(id);
             let documentHeight = document.body.scrollHeight - window.innerHeight;
             let progressHeight = (window.scrollY / documentHeight) *100;
