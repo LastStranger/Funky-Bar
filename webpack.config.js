@@ -17,7 +17,8 @@ module.exports = {
     output: {
         path: path.resolve('dist'),
         filename: 'js/[name].js',
-        libraryTarget: "commonjs2"
+        libraryTarget: "commonjs2",
+        library: 'FunkyBar'
     },
     module: {
         rules: [

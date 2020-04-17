@@ -1,6 +1,6 @@
 {
   "name": "funky-bar",
-  "version": "1.0.57",
+  "version": "1.1.1",
   "description": "Cyberpunk style of scroll bar",
   "main": "./dist/js/main.js",
   "scripts": {
