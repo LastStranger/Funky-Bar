@@ -1,5 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const TerserPlugin = require('terser-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 // const webpack = require('webpack');
@@ -53,12 +53,12 @@ module.exports = {
     },
     optimization: {
         minimizer: [
-            // new TerserPlugin({
-            //     cache: true,
-            //     parallel: true /*启用cpu加速打包速度*/,
-            //     sourceMap: true, // set to true if you want JS source maps/*帮助快速查找问题所在的地方*/
-            //     exclude: /node_modules/,
-            // }),
+            new TerserPlugin({
+                cache: true,
+                parallel: true /*启用cpu加速打包速度*/,
+                sourceMap: true, // set to true if you want JS source maps/*帮助快速查找问题所在的地方*/
+                exclude: /node_modules/,
+            }),
             new OptimizeCSSAssetsPlugin(
                 {}
             )

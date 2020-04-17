@@ -1,6 +1,6 @@
 {
   "name": "funky-bar",
-  "version": "1.0.54",
+  "version": "1.0.57",
   "description": "Cyberpunk style of scroll bar",
   "main": "./dist/js/main.js",
   "scripts": {
@@ -41,8 +41,6 @@
     "not ie < 9"
   ],
   "dependencies": {
-    "core-js": "^3.6.5",
-    "react": "^16.13.1",
-    "regenerator-runtime": "^0.13.5"
+    "react": "^16.13.1"
   }
 }
