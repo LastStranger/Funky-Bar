@@ -1,5 +1,8 @@
 import React, { useLayoutEffect, memo } from 'react';
 import css from './fancyBar.css';
+// import _ from 'lodash';
+
+// import Temp from "./Temp";
 
 let id = null;
 const FancyBar = memo(() => {

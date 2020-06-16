@@ -2,11 +2,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-// const webpack = require('webpack');
-// // const CompressionWebpackPlugin = require('compression-webpack-plugin');
-// const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
-// const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const path = require('path');
 module.exports = {
@@ -17,7 +12,7 @@ module.exports = {
     output: {
         path: path.resolve('dist'),
         filename: 'js/[name].js',
-        libraryTarget: "commonjs2",
+        libraryTarget: "umd",
         library: 'FunkyBar'
     },
     module: {
@@ -64,6 +59,15 @@ module.exports = {
                 {}
             )
         ],
+        splitChunks: {
+            // chunks: 'all',
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    chunks: 'async',
+                }
+            }
+        }
         // namedChunks: true,
         // runtimeChunk: true,
         // splitChunks: {
@@ -89,12 +93,12 @@ module.exports = {
     },
 
     plugins: [
-        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css', // filename代表的是没有异步加载的css和从node_modules里面分离出来的css那部分css, 简单来说就是初始打包成的那块css
             chunkFilename: 'css/chunk.[id].css', // chunkFilename代表的是从node_modules里面分离出来的css. 还有react-loadable异步加载的css
             // allChunks: true,
         }),
+        new CleanWebpackPlugin(),
         // new webpack.HashedModuleIdsPlugin(),
     ],
     externals: {
