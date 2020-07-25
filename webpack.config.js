@@ -15,6 +15,9 @@ module.exports = {
         libraryTarget: "umd",
         library: 'FunkyBar'
     },
+    resolve: {
+        extensions: [ '.tsx', '.ts', '.js' ],
+    },
     module: {
         rules: [
             {
@@ -39,11 +42,15 @@ module.exports = {
                 ],
                 include: /node_modules/,
             },
-
             {
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: { loader: 'babel-loader' },
+            },
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
             },
         ],
     },
@@ -102,6 +109,7 @@ module.exports = {
         // new webpack.HashedModuleIdsPlugin(),
     ],
     externals: {
-        react: "react"
+        react: "react",
+        lodash: 'lodash',
     }
 };

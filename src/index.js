@@ -2,8 +2,9 @@
 
 import FancyBar from './components/FancyBar.js';
 import React from "react";
+import Temp from "./components/Temp";
 
 
-const FunkyBar = () => <FancyBar />;
+const FunkyBar = () => <div><Temp name="Tom"/><FancyBar /></div>;
 
 export default FunkyBar;
