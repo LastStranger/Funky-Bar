@@ -7,7 +7,7 @@ const path = require('path');
 module.exports = {
     mode: 'production',
     entry: {
-        main: './src/index.js',
+        main: './src/index.tsx',
     },
     output: {
         path: path.resolve('dist'),
@@ -49,7 +49,7 @@ module.exports = {
             },
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
+                use: {loader: 'ts-loader', options: { onlyCompileBundledFiles: true }},
                 exclude: /node_modules/,
             },
         ],
