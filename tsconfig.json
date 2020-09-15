@@ -18,7 +18,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "declaration": true,
-    "outDir": "dist",
+//    "baseUrl": "../",
+    "outDir": "dist/js",
 //    "noEmit": true,
     "jsx": "react"
   },

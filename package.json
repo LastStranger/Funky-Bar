@@ -1,8 +1,9 @@
 {
   "name": "funky-bar",
-  "version": "1.2.6",
+  "version": "1.2.11",
   "description": "Cyberpunk style of scroll bar",
   "main": "./dist/js/main.js",
+  "typings": "dist/js/index.d.ts",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack"
