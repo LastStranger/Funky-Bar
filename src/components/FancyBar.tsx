@@ -1,7 +1,7 @@
-import React, {useLayoutEffect, memo, useRef} from 'react';
+import React, {useLayoutEffect, memo, useRef, ReactComponentElement} from 'react';
 import css from './fancyBar.css';
 
-const FancyBar = memo(() => {
+const FancyBar:React.FC =() => {
     const idRef:any = useRef();
     useLayoutEffect(() => {
         let progress = document.getElementsByClassName(css.scrollbar)[0] as HTMLElement;
@@ -24,7 +24,7 @@ const FancyBar = memo(() => {
             <div className={css.scrollPath} />
         </>
     );
-}, () => true);
+};
 
-export default FancyBar;
+export default memo(FancyBar, () => true);
 

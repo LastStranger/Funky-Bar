@@ -25,26 +25,26 @@ module.exports = {
                 use: [
                     { loader: MiniCssExtractPlugin.loader },
                     {
-                        loader: 'css-loader',
+                        loader: '@teamsupercell/typings-for-css-modules-loader',
                     },
                     {
-                        loader: 'typings-for-css-modules-loader',
+                        loader: 'css-loader',
                         options: {
                             modules: true,
-                            namedExport: true
+                            // namedExport: true
                         }
-                    }
+                    },
                 ],
                 exclude: /node_modules/,
             },
-            {
-                test: /\.css$/,
-                use: [
-                    { loader: MiniCssExtractPlugin.loader },
-                    { loader: 'css-loader' },
-                ],
-                include: /node_modules/,
-            },
+            // {
+            //     test: /\.css$/,
+            //     use: [
+            //         { loader: MiniCssExtractPlugin.loader },
+            //         { loader: 'typings-for-css-modules-loader' },
+            //     ],
+            //     include: /node_modules/,
+            // },
             {
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components)/,
