@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],// 支持css modules,还得在src里面创建声明文件
     "target": "es5",
     "lib": [
       "dom",

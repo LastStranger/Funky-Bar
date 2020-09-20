@@ -1,18 +1,15 @@
-import React, { useLayoutEffect, memo } from 'react';
+import React, {useLayoutEffect, memo, useRef} from 'react';
 import css from './fancyBar.css';
-// import _ from 'lodash';
 
-// import Temp from "./Temp";
-
-let id = null;
 const FancyBar = memo(() => {
+    const idRef:any = useRef();
     useLayoutEffect(() => {
-        let progress = document.getElementsByClassName(css.scrollbar)[0];
+        let progress = document.getElementsByClassName(css.scrollbar)[0] as HTMLElement;
         window.onscroll = function() {
-            cancelAnimationFrame(id);
+            cancelAnimationFrame(idRef.current);
             let documentHeight = document.body.scrollHeight - window.innerHeight;
             let progressHeight = (window.scrollY / documentHeight) *100;
-            id = requestAnimationFrame(() =>{
+            idRef.current = requestAnimationFrame(() =>{
                 progress.style.height = progressHeight + '%';
             })
         };
@@ -30,3 +27,4 @@ const FancyBar = memo(() => {
 }, () => true);
 
 export default FancyBar;
+

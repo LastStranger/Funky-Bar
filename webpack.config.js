@@ -26,11 +26,14 @@ module.exports = {
                     { loader: MiniCssExtractPlugin.loader },
                     {
                         loader: 'css-loader',
+                    },
+                    {
+                        loader: 'typings-for-css-modules-loader',
                         options: {
                             modules: true,
-                            sourceMap: true,
+                            namedExport: true
                         }
-                    },
+                    }
                 ],
                 exclude: /node_modules/,
             },
