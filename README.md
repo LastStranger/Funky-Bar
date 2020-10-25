@@ -1,4 +1,5 @@
 # Funky-Bar
+## !!! this project has been removed to funky-libray, no maintain anymore
 Cyberpunk style of scroll bar  
 ![demo](https://user-images.githubusercontent.com/29811304/79767612-26d5d800-835c-11ea-8523-938fa38b9d3c.gif)
 
