@@ -8,7 +8,6 @@ module.exports = {
     },
     output: {
         path: path.resolve('lib'),
-        // libraryTarget: "umd",
         library: {
             name: 'FunkyBar',
             type: 'umd',
@@ -17,7 +16,6 @@ module.exports = {
     },
     resolve: {
         extensions: [ '.tsx', '.ts', '.js' ],
-        // preferRelative: true,
     },
     module: {
         rules: [
@@ -28,7 +26,7 @@ module.exports = {
             },
             {
                 test: /\.css?$/,
-                use: {loader: 'css-loader'},
+                use: [{loader: "style-loader"}, {loader: 'css-loader'}],
                 exclude: /node_modules/,
             },
         ]
