@@ -11,6 +11,7 @@
       "esnext"
     ],
     "allowJs": true,
+    "noImplicitAny": false, // 开启AnyTypeScript
     "skipLibCheck": true,
     "strictNullChecks": false,
     "esModuleInterop": true,
