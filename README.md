@@ -8,4 +8,4 @@ npm install funky-bar
 ```
 import FunkyBar from 'funky-bar';  
 ```
-
+### if you like it, please give it a star
