@@ -7,6 +7,5 @@ npm install funky-bar
 ```
 ```
 import FunkyBar from 'funky-bar';  
-import 'funky-bar/dist/css/main.css';
 ```
 
