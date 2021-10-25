@@ -1,7 +1,6 @@
 import React from 'react';
 import FunkyBar from './components';
 
-
 const Index = () => {
     return (
         <div>

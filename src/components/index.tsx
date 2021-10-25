@@ -1,5 +1,5 @@
 import React, {useLayoutEffect, useRef} from 'react';
-import './index.css';
+import './index.scss';
 
 const FancyBar:React.FC =() => {
     const idRef:any = useRef();
