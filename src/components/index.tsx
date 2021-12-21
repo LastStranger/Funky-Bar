@@ -1,7 +1,11 @@
 import React, {useLayoutEffect, useRef} from 'react';
 import './index.scss';
 
-const FancyBar:React.FC =() => {
+interface Props {
+    [key: string]: any;
+}
+
+const FancyBar:React.FC<Props> =() => {
     const idRef:any = useRef();
     useLayoutEffect(() => {
         let progress = document.getElementsByClassName('scrollbar')[0] as HTMLElement;
